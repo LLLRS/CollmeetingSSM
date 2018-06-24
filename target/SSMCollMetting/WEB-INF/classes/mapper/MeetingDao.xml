@@ -1,0 +1,167 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.me.dao.MeetingDao">
+
+
+
+    <select id="getMeeting7Days" resultType="com.me.dto.MeetingDto">
+
+        SELECT
+            m.*, mr.`roomname` AS roomname
+        FROM
+            meeting m,
+            meetingroom mr
+        WHERE
+            meetingid IN (
+                SELECT
+                    meetingid
+                FROM
+                    meetingparticipants
+                WHERE
+                    employeeid =#{empid}
+            )
+        AND m.`roomid` = mr.`roomid`
+    </select>
+
+
+    <select id="getCanceledMeeting" resultType="com.me.dto.MeetingDto">
+        SELECT
+            m.*, mr.`roomname` AS roomname
+        FROM
+            meeting m,
+            meetingroom mr
+        WHERE
+            meetingid IN (
+                SELECT
+                    meetingid
+                FROM
+                    meetingparticipants
+                WHERE
+                    employeeid =#{empid}
+            )
+        AND m.`roomid` = mr.`roomid`
+        AND m. STATUS = 1
+    </select>
+
+    <select id="getMeetingById" resultType="Meeting">
+
+        SELECT
+            *
+        FROM
+            meeting
+        WHERE
+            meetingid =#{mid}
+    </select>
+
+    <select id="getMyBookingMeeting" resultType="com.me.dto.MeetingDto">
+
+        SELECT
+            m.*, mr.`roomname` AS roomname
+        FROM
+            meeting m,
+            meetingroom mr
+        WHERE
+            m.`reservationistid` =#{empid}
+        AND m. STATUS = 0
+        AND m.`roomid` = mr.`roomid`
+    </select>
+
+
+    <insert id="insert" parameterType="Meeting" >
+        INSERT INTO meeting (
+            meetingname,
+            roomid,
+            reservationistid,
+            numberofparticipants,
+            starttime,
+            endtime,
+            reservationtime,
+            description,
+            status
+        )
+        VALUES
+            (#{meetingname},#{roomid},#{reservationistid},#{numberofparticipants},
+            #{starttime},#{endtime},#{reservationtime},#{description},#{status})
+
+    </insert>
+
+    <update id="cancelMeeting">
+        UPDATE meeting
+        SET status = 1,
+         canceledtime =#{time}, canceledreason =#{reason}
+        WHERE
+            meetingid =#{mid}
+    </update>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        SELECT
+            count(*)
+        FROM
+            meeting m,
+            employee e,
+            meetingroom mr
+        WHERE
+            m.`roomid` = mr.`roomid`
+            AND m.`reservationistid` = e.`employeeid`
+        <choose>
+            <when test="meetingname != null and meetingname != '' " >
+                AND meetingname= #{meetingname}
+            </when>
+            <when test="roomname != null and roomname != '' " >
+                AND roomname= #{roomname}
+            </when>
+            <when test="reservername != null and reservername != '' " >
+                AND reservername= #{reservername}
+            </when>
+            <when test="reservefromdate  != null and reservefromdate  != ''
+                        and reservetodate   != null and reservetodate  != '' " >
+                AND reservetodate = #{reservetodate}  AND reservetodate = #{reservetodate}
+            </when>
+            <when test="meetingfromdate != null and meetingfromdate != ''
+                        and meetingtodate  != null and meetingtodate  != ''" >
+                AND meetingfromdate= #{meetingfromdate}  AND meetingtodate = #{meetingtodate}
+            </when>
+        </choose>
+        limit #{page},#{count}
+
+    </select>
+
+
+    <select id="searchMeeting" resultType="com.me.dto.SearchMeetingDto">
+        SELECT
+            m.*,
+            e.`employeename` AS employeename,
+            mr.`roomname` AS roomname
+        FROM
+            meeting m,
+            employee e,
+            meetingroom mr
+        WHERE
+            m.`roomid` = mr.`roomid`
+        AND m.`reservationistid` = e.`employeeid`
+        <choose>
+            <when test="meetingname != null and meetingname != '' " >
+                AND meetingname= #{meetingname}
+            </when>
+            <when test="roomname != null and roomname != '' " >
+                AND roomname= #{roomname}
+            </when>
+            <when test="reservername != null and reservername != '' " >
+                AND reservername= #{reservername}
+            </when>
+            <when test="reservefromdate  != null and reservefromdate  != ''
+                        and reservetodate   != null and reservetodate  != '' " >
+                AND reservetodate = #{reservetodate}  AND reservetodate = #{reservetodate}
+            </when>
+            <when test="meetingfromdate != null and meetingfromdate != ''
+                        and meetingtodate  != null and meetingtodate  != ''" >
+                AND meetingfromdate= #{meetingfromdate}  AND meetingtodate = #{meetingtodate}
+            </when>
+        </choose>
+        limit #{page},#{count}
+    </select>
+
+
+</mapper>

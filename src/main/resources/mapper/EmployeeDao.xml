@@ -1,0 +1,107 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.me.dao.EmployeeDao">
+
+    <select id="login" resultType="Employee">
+          SELECT *
+          FROM employee
+          WHERE
+            username= #{username} AND password=#{password}
+    </select>
+
+    <select id="getEmpByMeetingId" resultType="Employee">
+          SELECT *
+          FROM employee
+          WHERE employeeid
+          IN
+            (SELECT employeeid
+            FROM meetingparticipants
+            WHERE meetingid= #{mid})
+    </select>
+
+    <insert id="reg" parameterType="Employee">
+        INSERT INTO employee (
+            employeename,
+            username,
+            phone,
+            email,
+            status,
+            departmentid,
+            password,
+            role
+        )
+        VALUES
+            (#{employeename},#{username},#{phone},#{email},#{status},#{departmentid},#{password},#{role})
+    </insert>
+
+    <select id="isUsernameExists" resultType="Employee">
+        SELECT * from employee WHERE username=#{username}
+    </select>
+
+    <select id="getUnApproveaccount" resultType="Employee">
+        SELECT *
+        FROM employee
+        WHERE
+          status=1 AND role =2
+    </select>
+
+    <update id="updateEmpStatusById">
+        UPDATE employee set status=#{status} WHERE employeeid=#{id}
+    </update>
+
+    <select id="getCount" resultType="java.lang.Integer">
+        SELECT count(*)
+        FROM employee
+        WHERE status=#{status} AND role = 2
+          <choose>
+              <when test="employeename != null and employeename != '' " >
+                 AND employeename= #{employeename}
+              </when>
+              <when test="username != null and username != '' " >
+                  AND username= #{username}
+              </when>
+          </choose>
+
+    </select>
+
+    <select id="searchEmp" resultType="Employee">
+
+        SELECT * FROM employee
+        WHERE status=#{status} AND role = 2
+        <choose>
+            <when test="employeename != null and employeename != '' " >
+                AND employeename= #{employeename}
+            </when>
+            <when test="username != null and username != '' " >
+                AND username= #{username}
+            </when>
+        </choose>
+        limit #{page},#{count}
+
+    </select>
+
+    <select id="getEmpByDepId" resultType="Employee">
+
+        SELECT * FROM employee
+        WHERE
+          status=1 AND departmentid=#{depId}
+
+    </select>
+
+    <select id="getOddPsswordByEmpId" resultType="java.lang.String">
+
+        SELECT password FROM employee WHERE employeeid = #{empId}
+    </select>
+
+    <select id="getEmpByEmpId" resultType="Employee">
+        SELECT * FROM employee WHERE employeeid = #{empId}
+    </select>
+
+    <update id="updateOddPsswordByEmpId">
+
+        UPDATE employee set password= #{password} WHERE employeeid=#{empId}
+    </update>
+
+</mapper>

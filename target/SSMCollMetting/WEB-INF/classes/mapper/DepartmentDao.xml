@@ -1,0 +1,40 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.me.dao.DepartmentDao">
+
+    <select id="getAllDepartment" resultType="Department">
+
+          SELECT
+              *
+          FROM
+              department
+    </select>
+
+    <insert id="insert">
+
+        INSERT INTO department (departmentname)
+        VALUES
+            (#{name})
+    </insert>
+
+    <delete id="deleteDepById">
+        DELETE
+        FROM
+            department
+        WHERE
+            departmentid = #{id}
+
+    </delete>
+
+    <update id="updateDepById">
+
+        UPDATE department
+        SET departmentname = #{name}
+        WHERE
+            departmentid = #{id}
+    </update>
+
+
+</mapper>
