@@ -163,6 +163,7 @@ jdbc.username=root
 jdbc.password=root
 ```
 <br>
+
 2.整合Service
 --------
 
@@ -251,6 +252,230 @@ jdbc.password=root
 <a id="2">SpringMVC的传值问题</a>
 -----------
 
+1.前端传到Controller
+-----------
+
+**方法1：通过HttpServletRequest**<br>
+HttpServletRequest类是Servlet中的类型，代表了一个Servlet请求。无论Post还是Get请求，都能通过这种方式获取到。<br><br>
+
+**方法2：通过使用路径变量**<br>
+
+@RequestMapping中的{}中即为路径变量，该变量还需要在方法的参数值出现，并且标记@PathVariable。
+通过URL匹配的方式既可以实现传值，这是REST风格的一种传值方式。
+```
+@Controller
+public class MyTestController {
+@RequestMapping("/print/{name}/{age}")
+public String PrintInfo(@PathVariable String name, @PathVariable int age) {
+System.out.println("name:" + name);
+System.out.println("age:" + age);
+return "testpage";
+}
+}
+```
+
+**方法3：参数名匹配的方式**<br>
+```
+@Controller
+public class MyTestController {
+@RequestMapping(value="/print")
+public String PrintInfo(String name, int age) {
+System.out.println("name:" +name);
+System.out.println("age:" + age);
+return "testpage";
+}
+}
+```
+或者
+```
+@Controller
+public class MyTestController {
+@RequestMapping(value="/print")
+public String PrintInfo(@RequestParam("name") String name,@RequestParam("age") int age) {
+System.out.println("name:" +name);
+System.out.println("age:" + age);
+return "testpage";
+}
+}
+```
+当请求传入的参数名字和controller中代码的名字一样的时候，两种方式都可以，区别在于使用了注解@RequestParam，可以设置一个默认值来处理到null值,或者允许传入null值。如@RequestParam(value="name", defaultValue="John")。但是如果请求中参数的名字和变量名不一样的时候，就只能使用@RequestParam注解。<br>
+
+2.Controller传递到JSP
+---------
+
+**方法1：使用ModelAndView类**<br>
+代码如下：
+```
+@RequestMapping("/hello")
+public ModelAndView showMessage() {
+ModelAndView mv = new ModelAndView("helloworld");
+mv.addObject("userList", GetUserList());
+return mv;
+}
+public List<User> GetUserList()
+{
+List<User> lst=new ArrayList<User>();
+User user1=new User();
+user1.setName("zhangsan");
+user1.setAge(20);
+lst.add(user1);
+User user2=new User();
+user2.setName("lisi");
+user2.setAge(30);
+lst.add(user2);
+return lst;
+}
+```
+JSP页面(helloworld.jsp)中：
+```
+<%@ page language="java" contentType="text/html; charset=utf-8"
+pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Spring 4 MVC -HelloWorld</title>
+</head>
+<body>
+<c:forEach items="${userList}" var="user">
+${user.name} ${user.age}
+<br />
+</c:forEach>
+</body>
+</html>
+```
+
+**方法2：使用Model或者ModelMap**<br>
+
+Model是一个接口，ModelMap实现了Model接口。该方法和ModelAndView方法相似，只是Model和View分开来了，通过返回一个String来找到View，Model是注入到Controller的一个参数，通过对它添加属性，在jsp端读取值。代码如下:
+```
+@Controller
+public class HelloWorldController {
+String message = "Welcome to Spring MVC!";
+@RequestMapping("/hello")
+public String showMessage(Model model) {
+model.addAttribute("userList", GetUserList());
+return "helloworld";
+}
+public List<User> GetUserList()
+{
+List<User> lst=new ArrayList<User>();
+User user1=new User();
+user1.setName("zhangsan");
+user1.setAge(10);
+lst.add(user1);
+User user2=new User();
+user2.setName("lisi");
+user2.setAge(33);
+lst.add(user2);
+return lst;
+}
+}
+```
+JSP页面跟上面一样。
+
+<br>方法3：使用HttpServletRequest 和 Session,然后setAttribute()，就和Servlet中一样
+<br>更详细的内容，请参见[这篇文章](http://blog.51cto.com/cnn237111/1894506)<br>
+
+3.Controller之间的传值
+----------
+1.**redirect 重定向**
+```
+@RequestMapping(value ="/one")
+public String one(ModelMap model) {
+    model.put("name","cv");
+    return"redirect:/two?id=1";
+}
+       
+@RequestMapping(value ="/two")
+public String two(String id,String name,ModelMap model) {
+
+    return"index";
+}
+
+```
+请求/one后 请求重定向到/two时，通过model.put方法 ，two中name自动赋值为"cv",通过参数拼接id自动赋值为"1"。
+故redirect跳转到另一个controller是通过model还是拼接url均可。但是参数名称需一致，否则无法传参赋值。
+
+2.**forward 请求转发**
+```
+@RequestMapping(value ="/one")
+public String one(HttpServletRequest request,ModelMapmodel) {
+return"forward:/two";
+}  
+ @RequestMapping(value ="/two")
+    public String two(String id,ModelMap model) {
+    return"index;
+}
+```
+forward跳转，是请求转发，参数自动跳转，所以当请求/one?id=1时，请求转发到/two接口时，参数自动带过来了，two中id自动赋值为"1"。<br>
+参数名称需一致，否则无法传参赋值。
+
+4.@SessionAttributes()
+-----------
+SessionAttributes可以将值保存在session会话中，@SessionAttribute必须配合@ModelAttribute一起使用。
+```
+import *;
+
+@Controller
+@SessionAttributes({"loginUser","vc"})
+@RequestMapping("/coolmeetting")
+public class EmployeeController {
+
+    @Autowired
+    EmployeeService es;
+
+    @RequestMapping(value = "/login")
+    public String detail(String username, String password, HttpServletRequest request, Model model)
+    {
+        if(username==null||username.equals("")||password==null||password.equals(""))
+            return "login";
+
+        int login = es.login(username,password);
+
+        switch (login){
+
+            case 0 : model.addAttribute("error", "用户待审批，请稍候");
+                     return "login";
+
+            case 1 :
+                     model.addAttribute("loginUser", es.getLoginUser());
+                     model.addAttribute("vc",countService.getVcCount());
+
+                    HttpSession session = request.getSession();
+                    session.setAttribute("username", username);
+
+                     return "redirect:/coolmeetting/notifications";
+
+            case 2 : model.addAttribute("error", "用户审批未通过，请重新注册");
+                     return "login";
+
+            case 3 : model.addAttribute("error", "用户名或者密码输入错误，请重新登录");
+                     return "login";
+
+            case -1 : model.addAttribute("error", "账号已关闭，登陆失败，请联系管理员");
+                      return "login";
+        }
+
+        return "login";
+    }
+
+    @RequestMapping(value = "/notifications")
+    public String notifications(@ModelAttribute("loginUser")Employee loginUser,Model model){
+
+        int loginEmpId = loginUser.getEmployeeid();
+        List<MeetingDto> mt7 = meetingService.getMeeting7Days(loginEmpId);
+        List<MeetingDto> ct = meetingService.getCanceledMeeting(loginEmpId);
+
+        model.addAttribute("mt7",mt7);
+        model.addAttribute("cm",ct);
+
+        return "notifications";
+    }
+ }
+ ```
+ **注意：**　Spring允许我们有选择地指定 ModelMap中的哪些属性需要转存到 session中，以便下一个请求属对应的 ModelMap的属性列表中还能访问到这些属性。这一功能是通过类定义处标注 @SessionAttributes注解来实现的。@SessionAttributes只能声明在类上，而不能声明在方法上。@ModelAttribute跟@SessionAttributes配合在一起用。可以将ModelMap中属性的值通过该注解自动赋给指定变量。<br>
 
 
 <a id="3">SpringMVC的拦截器</a>
