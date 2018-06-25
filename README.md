@@ -8,7 +8,6 @@ SSMCollmeeting
 - [SSM的整合流程](#1)
 - [SpringMVC传值问题](#2)
 -  [SpringMVC的拦截器](#3)
--  [JUnit单元测试](#4)
 
 <a id="1">SSM的整合流程</a>
 -----------
@@ -414,7 +413,7 @@ forward跳转，是请求转发，参数自动跳转，所以当请求/one?id=1�
 
 4.@SessionAttributes()
 -----------
-SessionAttributes可以将值保存在session会话中，@SessionAttribute必须配合@ModelAttribute一起使用。
+SessionAttributes可以将值保存在session会话中。
 ```
 import *;
 
@@ -475,11 +474,174 @@ public class EmployeeController {
     }
  }
  ```
- **注意：**　Spring允许我们有选择地指定 ModelMap中的哪些属性需要转存到 session中，以便下一个请求属对应的 ModelMap的属性列表中还能访问到这些属性。这一功能是通过类定义处标注 @SessionAttributes注解来实现的。@SessionAttributes只能声明在类上，而不能声明在方法上。@ModelAttribute跟@SessionAttributes配合在一起用。可以将ModelMap中属性的值通过该注解自动赋给指定变量。<br>
+ **注意：**Spring允许有选择地指定 ModelMap中的哪些属性需要转存到 session中，以便下一个请求属对应的 ModelMap的属性列表中还能访问到这些属性。这一功能是通过类定义处标注 @SessionAttributes注解来实现的。@SessionAttributes只能声明在类上，而不能声明在方法上。@ModelAttribute跟@SessionAttributes配合在一起用。可以将ModelMap中属性的值通过该注解自动赋给指定变量。<br>
 
 
 <a id="3">SpringMVC的拦截器</a>
 -----------
+SpringMVC的处理器拦截器类似于Servlet 开发中的过滤器Filter，用于对处理器进行预处理和后处理。<br>
 
-<a id="4">JUnit单元测试</a>
------------
+1. **SpringMVC拦截器的定义**
+在SpringMVC中，定义拦截器要实现HandlerInterceptor接口，并实现该接口中提供的三个方法，如下：
+```
+public class LoginInterceptor implements HandlerInterceptor {
+
+    /*
+     * preHandle方法：进入Handler方法之前执行。可以用于身份认证、身份授权。
+     *               比如如果认证没有通过表示用户没有登陆，需要此方法拦截不再往下执行
+     *                （return   false），否则就放行（return true）。
+     */
+    @Override
+    public boolean preHandle(HttpServletRequest request,
+                             HttpServletResponse response,
+                             Object o) throws Exception {
+
+        String url = request.getRequestURI();
+        if(url.endsWith("login"))
+            return true;
+
+        HttpSession session = request.getSession();
+        //从session中取出用户身份信息
+        String username = (String) session.getAttribute("username");
+        if(username != null) {
+            return true;
+        }
+        System.out.println(url);
+
+        request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);
+
+        return false;
+    }
+
+    /*
+     * postHandle方法：进入Handler方法之后，返回ModelAndView之前执行。
+     *                 应用场景：从modelAndView出发：将公用的模型数据（比如菜单导航之类的）。
+     *                在这里传到视图，也可以在这里同一指定视图。
+     */
+    @Override
+    public void postHandle(HttpServletRequest httpServletRequest,
+                           HttpServletResponse httpServletResponse,
+                           Object o, ModelAndView modelAndView) throws Exception {
+
+    }
+    
+    /*
+     *afterCompletion方法：执行Handler完成之后执行。应用场景：统一异常处理，统一日志处理等。
+     */
+    @Override
+    public void afterCompletion(HttpServletRequest httpServletRequest,
+                                HttpServletResponse httpServletResponse,
+                                Object o, Exception e) throws Exception {
+
+    }
+}
+
+```
+2.**配置拦截器**
+```
+    <!--5:配置拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，按顺序执行 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/> <!-- 拦截所有的url包括子url路径 -->
+            <bean class="com.me.web.LoginInterceptor"/>
+        </mvc:interceptor>
+        <!-- 其他拦截器 -->
+    </mvc:interceptors>
+```
+
+3.**拦截器链**
+
+配置三个拦截器仿照上面的HandlerInterceptor1，HandlerInterceptor2和HandlerInterceptor3，配置是按照上面这个配置。来测试一下三个拦截器的执行情况，并做相关总结。
+```
+//测试拦截器1
+public class HandlerInterceptor1 implements HandlerInterceptor{
+
+    @Override
+    public boolean preHandle(HttpServletRequest request,
+            HttpServletResponse response, Object handler) throws Exception {
+
+        System.out.println("HandlerInterceptor1....preHandle");
+
+        //false表示拦截，不向下执行；true表示放行
+        return true;
+    }
+
+    @Override
+    public void postHandle(HttpServletRequest request,
+            HttpServletResponse response, Object handler,
+            ModelAndView modelAndView) throws Exception {
+
+        System.out.println("HandlerInterceptor1....postHandle");
+
+    }
+
+    @Override
+    public void afterCompletion(HttpServletRequest request,
+            HttpServletResponse response, Object handler, Exception ex)
+            throws Exception {
+
+        System.out.println("HandlerInterceptor1....afterCompletion");
+    }
+}
+//HandlerInterceptor2和HandlerInterceptor3类似
+```
+```
+<!-- 配置拦截器 -->
+<mvc:interceptors>
+    <!-- 多个拦截器，按顺序执行 -->        
+    <mvc:interceptor>
+        <mvc:mapping path="/**"/> <!-- 表示拦截所有的url包括子url路径 -->
+        <bean class="com.me.web.HandlerInterceptor1"/>
+    </mvc:interceptor>
+    <mvc:interceptor>
+        <mvc:mapping path="/**"/>
+        <bean class="com.me.web.HandlerInterceptor2"/>
+    </mvc:interceptor>
+    <mvc:interceptor>
+        <mvc:mapping path="/**"/>
+        <bean class="com.me.web.HandlerInterceptor3"/>
+    </mvc:interceptor>
+</mvc:interceptors>
+```
+
+**情况1：三个拦截器都放行**<br>
+将三个拦截器的preHandle方法中返回值都改成true，测试一下拦截器的执行顺序，测试结果如下：
+```
+HandlerInterceptor1….preHandle 
+HandlerInterceptor2….preHandle 
+HandlerInterceptor3….preHandle
+
+HandlerInterceptor3….postHandle 
+HandlerInterceptor2….postHandle 
+HandlerInterceptor1….postHandle
+
+HandlerInterceptor3….afterCompletion 
+HandlerInterceptor2….afterCompletion 
+HandlerInterceptor1….afterCompletion
+```
+**结论：**当所有拦截器都放行的时候，preHandle方法是按照配置的顺序执的；而另外两个方法按照配置的顺序逆向执行的。类似设计模式中的责任链模式.<br><br>
+**情况2：有一个拦截器不放行**<br>
+将第三个拦截器的preHandle方法中返回值改成false，前两个还是true，来测试一下拦截器的执行顺序，测试结果如下：
+```
+HandlerInterceptor1….preHandle 
+HandlerInterceptor2….preHandle 
+HandlerInterceptor3….preHandle
+
+HandlerInterceptor2….afterCompletion 
+HandlerInterceptor1….afterCompletion
+```
+- 由于拦截器1和2放行，所以拦截器3的preHandle才能执行。也就是说前面的拦截器放行，后面的拦截器才能执行preHandle.
+- 拦截器3不放行，所以其另外两个方法没有被执行。即如果某个拦截器不放行，那么它的另外两个方法就不会背执行。 
+- 只要有一个拦截器不放行，所有拦截器的postHandle方法都不会执行，但是只要执行过preHandle并且放行的，就会执行afterCompletion方法。
+<br><br>
+**情况3：三个拦截器都不放行**<br>
+运行结果：
+```
+HandlerInterceptor1….preHandle
+```
+**结论：** 只执行了第一个拦截器的preHandle方法，因为都不放行，所以没有一个执行postHandle方法和afterCompletion方法。<br><br>
+
+
+
+<br>更详细的内容，请参见[这篇文章](https://blog.csdn.net/eson_15/article/details/51749880)<br>
