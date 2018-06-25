@@ -6,17 +6,18 @@ SSMCollmeeting
 
 对之前的用JavaBean+Servlet+Jsp的collmeting项目用SSM+Maven进行了重写，重写过程中遇到了很多问题，解决这些问题的过程中，进一步加深了对SSM的理解。<br>
 - [SSM的整合流程](#1)
-- [传值问题](#2)
+- [SpringMVC传值问题](#2)
 -  [SpringMVC的拦截器](#3)
 -  [JUnit单元测试](#4)
 
 <a id="1">SSM的整合流程</a>
 -----------
+
 完成Spring、Spring MVC以及Mybatis整合工作，其实不难，就是将这三个框架的配置文件提取出来放在一个项目中，使得Spring可以统一管理资源。整个过程分为三步。<br><br>
 第一步:整合dao(即mapper)，完成Spring与Mybatis的整合。<br>
 第二步:整合service，Spring管理service接口，service中可以调用Spring容器中的dao(mapper)。<br>
 第三步:整合controller，Spring管理controller接口，在controller调用service。<br>
-<br><br><br>
+<br>
 **目录结构**<br>
 []()
 <br><br>
@@ -24,7 +25,7 @@ SSMCollmeeting
 <br><br>
 1.整合Dao
 --------
-这个过程中主要是编写mapper文件，spring-dao.xml和mybatis-config.xml这三个文件。<br><br>
+这个过程中主要是编写mapper文件，spring-dao.xml和mybatis-config.xml这三个文件，.实现对数据库的相关操作。<br><br>
 mapper文件是我们根据对应的Dao接口开发的实现操纵数据库的文件,namespace属性一定要和对应的Dao接口关联。
 ```
 <!DOCTYPE mapper
@@ -161,8 +162,93 @@ jdbc.url=jdbc:mysql://localhost:3306/meeting?useUnicode=true&characterEncoding=u
 jdbc.username=root
 jdbc.password=root
 ```
+<br>
+2.整合Service
+--------
 
-<a id="2">传值问题</a>
+这个步骤主要是编写spring-service.xml文件的编写，实现业务逻辑的编写。
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--扫描service包下所有使用注解的类型-->
+    <context:component-scan base-package="com.me.service"/>
+
+    <!--配置事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 配置基于注解的声明式事务-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
+</beans>
+```
+
+3.整合controller
+--------
+这个步骤主要是编写spring-web.xml文件的编写，实现与web页面的交互。
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <!--配置spring mvc-->
+    <!--1,开启springmvc注解模式
+    a.自动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
+    b.默认提供一系列的功能:数据绑定，数字和日期的format@NumberFormat,@DateTimeFormat
+    c:xml,json的默认读写支持-->
+    <mvc:annotation-driven/>
+
+    <!--2.静态资源默认servlet配置-->
+    <!--
+        1).加入对静态资源处理：js,gif,png
+        2).允许使用 "/" 做整体映射
+    -->
+    <mvc:default-servlet-handler/>
+
+    <!--3：配置JSP 显示ViewResolver-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--4:扫描web相关的controller-->
+    <context:component-scan base-package="com.me.web"/>
+
+    <!--5:配置拦截器 -->
+    <mvc:interceptors>
+        <!-- 多个拦截器，按顺序执行 -->
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/> <!-- 拦截所有的url包括子url路径 -->
+            <bean class="com.me.web.LoginInterceptor"/>
+        </mvc:interceptor>
+        <!-- 其他拦截器 -->
+    </mvc:interceptors>
+
+</beans>
+```
+
+<a id="2">SpringMVC的传值问题</a>
 -----------
 
 
