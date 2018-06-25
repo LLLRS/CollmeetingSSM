@@ -18,7 +18,7 @@ SSMCollmeeting
 第三步:整合controller，Spring管理controller接口，在controller调用service。<br>
 <br>
 **目录结构**<br>
-[]()
+[](https://github.com/LLLRS/SSMCollmeeting/blob/master/img/content.JPG)
 <br><br>
 可以看出，利用Maven创建的项目将所有的配置文件都放在了resources目录下，包含mapper文件，spring-dao.xml,spring-service.xml,spring-web.xml,以及mybatis-config.xml,jdbc.properties(存放数据库的配置文件).
 <br><br>
