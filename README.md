@@ -10,18 +10,22 @@ SSMCollmeeting
 -  [SpringMVC的拦截器](#3)
 
 <a id="1">SSM的整合流程</a>
------------
+----------
 
 完成Spring、Spring MVC以及Mybatis整合工作，其实不难，就是将这三个框架的配置文件提取出来放在一个项目中，使得Spring可以统一管理资源。整个过程分为三步。<br><br>
 第一步:整合dao(即mapper)，完成Spring与Mybatis的整合。<br>
 第二步:整合service，Spring管理service接口，service中可以调用Spring容器中的dao(mapper)。<br>
 第三步:整合controller，Spring管理controller接口，在controller调用service。<br>
+
 <br>
-**目录结构**<br>
+**目录结构如下：**<br>
 [](https://github.com/LLLRS/SSMCollmeeting/blob/master/img/content.JPG)
+
 <br><br>
 可以看出，利用Maven创建的项目将所有的配置文件都放在了resources目录下，包含mapper文件，spring-dao.xml,spring-service.xml,spring-web.xml,以及mybatis-config.xml,jdbc.properties(存放数据库的配置文件).
 <br><br>
+
+
 1.整合Dao
 --------
 这个过程中主要是编写mapper文件，spring-dao.xml和mybatis-config.xml这三个文件，.实现对数据库的相关操作。<br><br>
