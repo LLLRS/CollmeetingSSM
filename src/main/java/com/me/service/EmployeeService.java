@@ -1,5 +1,6 @@
 package com.me.service;
 
+import Utils.Md5Utils;
 import com.me.dao.EmployeeDao;
 import com.me.dto.SearchEmpDto;
 import com.me.entity.*;
@@ -24,7 +25,8 @@ public class EmployeeService {
 
     public int login(String username, String password) {
         int result = 3;//表示登录失败
-        Employee loginEmp = employeeDao.login(username, password);
+        String md5Password = Md5Utils.getMd5(username,password);
+        Employee loginEmp = employeeDao.login(username,md5Password);
         if (loginEmp == null) {
             return result;
         }else{

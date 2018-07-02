@@ -12,10 +12,16 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request,
                              HttpServletResponse response,
                              Object o) throws Exception {
+        //无需登录，允许访问的地址
+        String[] allowUrls =new String[]{"/login","/js","/css","/images","/image"};
 
         String url = request.getRequestURI();
-        if(url.endsWith("login"))
-            return true;
+        for (String strUrl : allowUrls) {
+            if(url.contains(strUrl))
+            {
+                return true;
+            }
+        }
 
         HttpSession session = request.getSession();
         //从session中取出用户身份信息
