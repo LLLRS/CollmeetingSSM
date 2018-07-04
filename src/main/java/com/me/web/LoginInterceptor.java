@@ -13,11 +13,11 @@ public class LoginInterceptor implements HandlerInterceptor {
                              HttpServletResponse response,
                              Object o) throws Exception {
         //无需登录，允许访问的地址
-        String[] allowUrls =new String[]{"/login","/js","/css","/images","/image"};
+        String[] allowUrls =new String[]{"/login",".js",".css","/images","/image"};
 
         String url = request.getRequestURI();
         for (String strUrl : allowUrls) {
-            if(url.contains(strUrl))
+            if(url.contains(strUrl)||url.endsWith(strUrl))
             {
                 return true;
             }

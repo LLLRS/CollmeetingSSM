@@ -18,24 +18,14 @@
 
 </head>
 <body>
-<div class="page-header">
-    <div class="header-banner">
-        <img src="../../../images/header.png" alt="CoolMeeting"/>
-    </div>
-    <div class="header-title">
-        欢迎访问Cool-Meeting会议管理系统
-    </div>
-    <div class="header-quicklink">
-        欢迎您，<strong><c:if test="${loginUser!=null}">,${loginUser.employeename}</c:if></strong>
-    </div>
-</div>
+<jsp:include page="common/top.jsp"/>
 <div class="page-body">
     <jsp:include page="common/leftMenu.jsp"/>
     <div class="page-content">
         <div class="content-nav">
             修改密码
         </div>
-        <form method="post" action="/changepassword?dostatus=1">
+        <form method="post" action="/coolmeetting/changepassword?dostatus=1">
             <fieldset>
                 <legend>修改密码信息</legend>
                 <table class="formtable" style="width:50%">

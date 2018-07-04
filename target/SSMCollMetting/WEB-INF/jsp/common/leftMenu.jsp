@@ -8,6 +8,7 @@
             <li class="sidebar-menuitem"><a href="/coolmeetting/notifications">最新通知</a></li>
             <li class="sidebar-menuitem active"><a href="/coolmeetting/mybooking">我的预定</a></li>
             <li class="sidebar-menuitem"><a href="/coolmeetting/mymeeting">我的会议</a></li>
+            <li class="sidebar-menuitem"><a href="/coolmeetting/changepassword?dostatus=0">修改密码</a></li>
         </ul>
     </div>
     <c:if test="${loginUser.role==1}">

@@ -2,6 +2,7 @@ package com.me.web;
 
 
 
+import Utils.Md5Utils;
 import com.google.gson.Gson;
 import com.me.dto.MeetingDto;
 import com.me.dto.SearchEmpDto;
@@ -24,6 +25,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Objects;
 
 @Controller
 @SessionAttributes({"loginUser","vc"})
@@ -309,7 +311,7 @@ public class EmployeeController {
         request.setAttribute("status", status);
 
         return "searchemployees";
-        
+
     }
 
     @RequestMapping("/searchmeeting")
@@ -419,10 +421,10 @@ public class EmployeeController {
 
         MeetingRoom meetingRoom = meetingRoomService.getMeetingRoomById(roomid);
         model.addAttribute("mr", meetingRoom);
-        
+
         return "roomdetails";
     }
-    
+
     @RequestMapping("/bookmeeting")
     public String bookmeeting( Model model){
 
@@ -457,5 +459,40 @@ public class EmployeeController {
 
         List<Employee> list = es.getEmpByDepId(departmentid);
         return list;
+    }
+
+    @RequestMapping("/changepassword")
+    public String changepassword(@ModelAttribute("loginUser")Employee loginUser,
+                                 HttpServletRequest request, Model model){
+
+        String dostatus = request.getParameter("dostatus");
+
+        if("1".equals(dostatus)) {
+            String np = request.getParameter("new");
+            String cp = request.getParameter("comfirm");
+            String op = Md5Utils.getMd5(loginUser.getUsername(),request.getParameter("origin"));
+
+
+            int loginEmpId = loginUser.getEmployeeid();
+            String ep = es.getOddPsswordByEmpId(loginEmpId);
+
+//            System.out.println("employeename: "+loginUser.getUsername());
+//            System.out.println("loginEmpId: "+loginEmpId+"  ep:  "+ ep);
+//            System.out.println("loginEmpId: "+loginEmpId+"  op:  "+ op);
+
+            if(ep.equals(op)){
+                if(Objects.equals(cp,np)){
+                    es.updateOddPsswordByEmpId(loginEmpId, Md5Utils.getMd5(loginUser.getUsername(),np));
+                    model.addAttribute("error", "密码修改成功，请用新密码登录");
+                    return "login";
+                }else{
+                    model.addAttribute("error", "两次输入密码不一致");
+                }
+            }else{
+                model.addAttribute("error", "原密码输入错误");
+            }
+        }
+
+        return "changepassword";
     }
 }
