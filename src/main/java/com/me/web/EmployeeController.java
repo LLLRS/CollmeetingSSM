@@ -2,8 +2,7 @@ package com.me.web;
 
 
 
-import Utils.Md5Utils;
-import com.google.gson.Gson;
+import com.me.Utils.Md5Utils;
 import com.me.dto.MeetingDto;
 import com.me.dto.SearchEmpDto;
 import com.me.dto.SearchMeetingDto;
@@ -17,12 +16,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.Objects;

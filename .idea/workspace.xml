@@ -8,19 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6dd947e7-8b8b-4fb4-a6ff-bbc2e3806667" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Md5Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/me/web/LoginInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/web/LoginInterceptor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/changepassword.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/changepassword.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/leftMenu.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/leftMenu.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting.war" afterPath="$PROJECT_DIR$/target/SSMCollMetting.war" />
-      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/web/EmployeeController.class" afterPath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/web/EmployeeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/web/LoginInterceptor.class" afterPath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/web/LoginInterceptor.class" />
-      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/jsp/changepassword.jsp" afterPath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/jsp/changepassword.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/jsp/common/leftMenu.jsp" afterPath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/jsp/common/leftMenu.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting/index.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/me/web/EmployeeController.class" afterPath="$PROJECT_DIR$/target/classes/com/me/web/EmployeeController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/me/web/LoginInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/me/web/LoginInterceptor.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,12 +54,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
+            <state relative-caret-position="3285">
               <caret line="486" column="33" lean-forward="false" selection-start-line="486" selection-start-column="33" selection-end-line="486" selection-end-column="33" />
               <folding>
+                <element signature="method#detail#0;class#EmployeeController#0" expanded="false" />
                 <element signature="method#logout#0;class#EmployeeController#0" expanded="false" />
                 <element signature="method#notifications#0;class#EmployeeController#0" expanded="false" />
                 <element signature="method#meetingdetails#0;class#EmployeeController#0" expanded="false" />
@@ -93,71 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="leftMenu.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/leftMenu.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="63" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="changepassword.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/changepassword.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="approveaccount.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/approveaccount.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/me/entity/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Md5Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Md5Utils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="52" />
+            <state relative-caret-position="476">
+              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -222,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/me/dto/searchMeetingDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/dto/searchEmpDto.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
@@ -270,9 +200,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/me/web/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/leftMenu.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/Md5Utils.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/changepassword.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/Md5Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java" />
       </list>
     </option>
   </component>
@@ -318,7 +249,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -395,37 +326,16 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
               <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -450,15 +360,11 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.me.dao" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\resource" />
-      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\WEB-INF\jsp\common" />
-      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp" />
-      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\WEB-INF\jsp" />
-      <recent name="F:\IntelliJwork\SSMCollMetting\src\main" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.me" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.me.web.listener" />
@@ -470,6 +376,13 @@
       <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\WEB-INF\jsp\comon" />
       <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\resource" />
       <recent name="F:\IntelliJwork\SSMCollMetting\src\main\java\com\me\service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\resource" />
+      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\WEB-INF\jsp\common" />
+      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp" />
+      <recent name="F:\IntelliJwork\SSMCollMetting\src\main\webapp\WEB-INF\jsp" />
+      <recent name="F:\IntelliJwork\SSMCollMetting\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,7 +397,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.tomcat">
+  <component name="RunManager" selected="Application.Md5Utils">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -494,11 +407,11 @@
     <configuration name="Md5Utils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="Utils.*" />
+          <option name="PATTERN" value="com.me.Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="Utils.Md5Utils" />
+      <option name="MAIN_CLASS_NAME" value="com.me.Utils.Md5Utils" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -800,7 +713,7 @@
       <workItem from="1529670855288" duration="17820000" />
       <workItem from="1529912541827" duration="5000" />
       <workItem from="1530532516980" duration="3768000" />
-      <workItem from="1530705299495" duration="5478000" />
+      <workItem from="1530705299495" duration="6367000" />
     </task>
     <servers />
   </component>
@@ -837,7 +750,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105835000" />
+    <option name="totallyTimeSpent" value="106724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -849,7 +762,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -872,7 +786,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48584372" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28487125" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28487125" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26502147" sideWeight="0.5067568" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1274,14 +1188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/Md5Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/leftMenu.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -1330,11 +1236,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="3285">
           <caret line="486" column="33" lean-forward="false" selection-start-line="486" selection-start-column="33" selection-end-line="486" selection-end-column="33" />
           <folding>
+            <element signature="method#detail#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#logout#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#notifications#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#meetingdetails#0;class#EmployeeController#0" expanded="false" />
@@ -1354,14 +1277,6 @@
             <element signature="method#searchmeeting#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#addmr#0;class#EmployeeController#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
