@@ -23,6 +23,7 @@
                     employeeid =#{empid}
             )
         AND m.`roomid` = mr.`roomid`
+        AND m. STATUS = 0
     </select>
 
 

@@ -8,9 +8,20 @@
   <component name="ChangeListManager">
     <list default="true" id="6dd947e7-8b8b-4fb4-a6ff-bbc2e3806667" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/Md5Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/me/entity/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/entity/Employee.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/MeetingDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/MeetingDao.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cancelmeeting.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cancelmeeting.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingdetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingdetails.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" />
+      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting.war" afterPath="$PROJECT_DIR$/target/SSMCollMetting.war" />
+      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/service/EmployeeService.class" afterPath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/service/EmployeeService.class" />
+      <change beforePath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/web/EmployeeController.class" afterPath="$PROJECT_DIR$/target/SSMCollMetting/WEB-INF/classes/com/me/web/EmployeeController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/me/service/EmployeeService.class" afterPath="$PROJECT_DIR$/target/classes/com/me/service/EmployeeService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/me/web/EmployeeController.class" afterPath="$PROJECT_DIR$/target/classes/com/me/web/EmployeeController.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,48 +64,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="EmployeeController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3285">
-              <caret line="486" column="33" lean-forward="false" selection-start-line="486" selection-start-column="33" selection-end-line="486" selection-end-column="33" />
-              <folding>
-                <element signature="method#detail#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#logout#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#notifications#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#meetingdetails#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#cancelmeeting#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#docanceled#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#mybooking#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#mymeeting#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#departments#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#adddep#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#deletedep#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#updateDep#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#reg#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#doreg#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#approveaccount#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#aupdateEmpStatus#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#serachemp#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#searchmeeting#0;class#EmployeeController#0" expanded="false" />
-                <element signature="method#addmr#0;class#EmployeeController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Md5Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -153,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/me/dto/searchEmpDto.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
@@ -162,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/test/java/com/me/service/EmployeeServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/dao/EmployeeDao.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/me/dao/EmployeeDaoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/web/listener/VisitCountListener.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/service/CountService.java" />
@@ -177,21 +145,16 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/top.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/approveaccount.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/bookmeeting.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cancelmeeting.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departments.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingdetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingrooms.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mybookings.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mymeetings.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/notifications.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/roomdetails.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/dto/SearchEmpDto.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchemployees.jsp" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/MeetingDao.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/dao/MeetingDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/me/service/MeetingService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/me/dao/MeetingDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/dto/SearchMeetingDto.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchmeetings.jsp" />
@@ -199,11 +162,18 @@
         <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/web/LoginInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/leftMenu.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/changepassword.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/Md5Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/me/service/MeetingService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/MeetingDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/me/entity/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingdetails.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cancelmeeting.jsp" />
       </list>
     </option>
   </component>
@@ -249,7 +219,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -292,9 +262,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,7 +305,73 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="spring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSMCollMetting" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSMCollMetting" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -397,7 +433,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Md5Utils">
+  <component name="RunManager" selected="Tomcat Server.tomcat">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -714,6 +750,8 @@
       <workItem from="1529912541827" duration="5000" />
       <workItem from="1530532516980" duration="3768000" />
       <workItem from="1530705299495" duration="6367000" />
+      <workItem from="1531054244103" duration="2151000" />
+      <workItem from="1531231579285" duration="6875000" />
     </task>
     <servers />
   </component>
@@ -750,7 +788,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106724000" />
+    <option name="totallyTimeSpent" value="115750000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -762,8 +800,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -786,9 +823,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48584372" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28487125" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23497854" sideWeight="0.49324325" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26502147" sideWeight="0.5067568" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -797,6 +833,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50790066" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -849,30 +886,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="98" column="58" lean-forward="false" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
-          <folding>
-            <marker date="1529631312104" expanded="true" signature="226:333" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="417:502" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="417:594" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="503:593" ph="SELECT emplo... meetingparticipants" />
-            <marker date="1529631312104" expanded="true" signature="665:989" ph="INSERT INTO employee... " />
-            <marker date="1529631312104" expanded="true" signature="1070:1119" ph="SELECT * fro... employee" />
-            <marker date="1529631312104" expanded="true" signature="1203:1278" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="1340:1399" ph="UPDATE employee... " />
-            <marker date="1529631312104" expanded="true" signature="1494:1562" ph="SELECT count... employee" />
-            <marker date="1529631312104" expanded="true" signature="1956:2356" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="2436:2517" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="2436:2518" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="2612:2669" ph="SELECT passw... employee" />
-            <marker date="1529631312104" expanded="true" signature="2747:2797" ph="SELECT * FRO... employee" />
-            <marker date="1529631312104" expanded="true" signature="2864:2931" ph="UPDATE employee... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/me/web/listener/VisitCountListener.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/me/dao/CountDao.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -931,77 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cancelmeeting.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3457">
-          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/bookmeeting.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departments.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingdetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingrooms.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mybookings.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mymeetings.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/roomdetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/me/dao/EmployeeDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2697">
@@ -1016,51 +958,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchemployees.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="103" column="89" lean-forward="false" selection-start-line="103" selection-start-column="89" selection-end-line="103" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/dao/MeetingDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MeetingDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="134" column="27" lean-forward="false" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="27" />
-          <folding>
-            <marker date="1529812462298" expanded="true" signature="249:630" ph="SELECT m.*, meeting" />
-            <marker date="1529812462298" expanded="true" signature="419:579" ph="SELECT meeti... meetingparticipants" />
-            <marker date="1529812462298" expanded="true" signature="727:1134" ph="SELECT m.*, meeting" />
-            <marker date="1529812462298" expanded="true" signature="897:1057" ph="SELECT meeti... meetingparticipants" />
-            <marker date="1529812462298" expanded="true" signature="1213:1310" ph="SELECT * FRO... meeting" />
-            <marker date="1529812462298" expanded="true" signature="1408:1640" ph="SELECT m.*, meeting" />
-            <marker date="1529812462298" expanded="true" signature="1715:2151" ph="INSERT INTO meeting... " />
-            <marker date="1529812462298" expanded="true" signature="2208:2348" ph="UPDATE meeting... " />
-            <marker date="1529812462298" expanded="true" signature="2430:3656" ph="SELECT count... meeting" />
-            <marker date="1529812462298" expanded="true" signature="3755:4050" ph="SELECT m.*, meeting" />
-            <marker date="1529812462298" expanded="true" signature="3755:5057" ph="SELECT m.*, meeting" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/me/entity/Meeting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/service/MeetingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="89" column="33" lean-forward="false" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -1087,21 +988,6 @@
             <element signature="e#4860#4861#0" expanded="false" />
             <element signature="e#4902#4903#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/notifications.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="76" column="6" lean-forward="false" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchmeetings.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="136" column="91" lean-forward="false" selection-start-line="136" selection-start-column="91" selection-end-line="136" selection-end-column="91" />
         </state>
       </provider>
     </entry>
@@ -1133,14 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="57" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1156,14 +1034,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/me/web/LoginInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -1180,10 +1051,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/top.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1431">
+          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/MeetingDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="725">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <marker date="1531274414329" expanded="true" signature="249:630" ph="SELECT m.*, meeting" />
+            <marker date="1531274414329" expanded="true" signature="249:656" ph="SELECT m.*, meeting" />
+            <marker date="1531274414329" expanded="true" signature="419:579" ph="SELECT meeti... meetingparticipants" />
+            <marker date="1531274414329" expanded="true" signature="753:1160" ph="SELECT m.*, meeting" />
+            <marker date="1531274414329" expanded="true" signature="923:1083" ph="SELECT meeti... meetingparticipants" />
+            <marker date="1531274414329" expanded="true" signature="1239:1336" ph="SELECT * FRO... meeting" />
+            <marker date="1531274414329" expanded="true" signature="1434:1666" ph="SELECT m.*, meeting" />
+            <marker date="1531274414329" expanded="true" signature="1741:2177" ph="INSERT INTO meeting... " />
+            <marker date="1531274414329" expanded="true" signature="2234:2374" ph="UPDATE meeting... " />
+            <marker date="1531274414329" expanded="true" signature="2456:3682" ph="SELECT count... meeting" />
+            <marker date="1531274414329" expanded="true" signature="3781:4076" ph="SELECT m.*, meeting" />
+            <marker date="1531274414329" expanded="true" signature="3781:5083" ph="SELECT m.*, meeting" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/dao/MeetingDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/service/MeetingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/EmployeeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <marker date="1531278629991" expanded="true" signature="226:345" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="226:372" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="456:541" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="456:633" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="542:632" ph="SELECT emplo... meetingparticipants" />
+            <marker date="1531278629991" expanded="true" signature="704:1028" ph="INSERT INTO employee... " />
+            <marker date="1531278629991" expanded="true" signature="1109:1158" ph="SELECT * fro... employee" />
+            <marker date="1531278629991" expanded="true" signature="1245:1321" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="1383:1442" ph="UPDATE employee... " />
+            <marker date="1531278629991" expanded="true" signature="1537:1605" ph="SELECT count... employee" />
+            <marker date="1531278629991" expanded="true" signature="1999:2399" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="2479:2560" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="2479:2561" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="2655:2712" ph="SELECT passw... employee" />
+            <marker date="1531278629991" expanded="true" signature="2790:2840" ph="SELECT * FRO... employee" />
+            <marker date="1531278629991" expanded="true" signature="2907:2974" ph="UPDATE employee... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/me/service/EmployeeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="27" />
+        <state relative-caret-position="493">
+          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1349#1350#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/entity/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1196,66 +1178,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/addmeetingroom.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/entity/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="26" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/approveaccount.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/top.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="53" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/changepassword.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/me/Utils/Md5Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/me/web/EmployeeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3285">
-          <caret line="486" column="33" lean-forward="false" selection-start-line="486" selection-start-column="33" selection-end-line="486" selection-end-column="33" />
+        <state relative-caret-position="380">
+          <caret line="228" column="45" lean-forward="false" selection-start-line="228" selection-start-column="45" selection-end-line="228" selection-end-column="45" />
           <folding>
             <element signature="method#detail#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#logout#0;class#EmployeeController#0" expanded="false" />
@@ -1269,14 +1195,133 @@
             <element signature="method#adddep#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#deletedep#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#updateDep#0;class#EmployeeController#0" expanded="false" />
-            <element signature="method#reg#0;class#EmployeeController#0" expanded="false" />
-            <element signature="method#doreg#0;class#EmployeeController#0" expanded="false" />
-            <element signature="method#approveaccount#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#aupdateEmpStatus#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#serachemp#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#searchmeeting#0;class#EmployeeController#0" expanded="false" />
             <element signature="method#addmr#0;class#EmployeeController#0" expanded="false" />
+            <element signature="method#changepassword#0;class#EmployeeController#0" expanded="false" />
+            <element signature="e#15202#15277#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchmeetings.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3944">
+          <caret line="136" column="91" lean-forward="false" selection-start-line="136" selection-start-column="91" selection-end-line="136" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/searchemployees.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2987">
+          <caret line="103" column="89" lean-forward="false" selection-start-line="103" selection-start-column="89" selection-end-line="103" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/roomdetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="42" column="78" lean-forward="false" selection-start-line="42" selection-start-column="78" selection-end-line="42" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/notifications.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2204">
+          <caret line="76" column="6" lean-forward="false" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mymeetings.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/mybookings.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="50" lean-forward="false" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingrooms.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/meetingdetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4182">
+          <caret line="61" column="7" lean-forward="false" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/departments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/changepassword.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/cancelmeeting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="62" column="4" lean-forward="false" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/bookmeeting.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/approveaccount.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="40" column="91" lean-forward="false" selection-start-line="40" selection-start-column="67" selection-end-line="40" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/addmeetingroom.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1398">
+          <caret line="4" column="51" lean-forward="false" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

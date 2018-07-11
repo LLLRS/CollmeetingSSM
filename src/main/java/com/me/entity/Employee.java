@@ -9,7 +9,7 @@ public class Employee {
     private int status;
     private int departmentid;
     private String password;
-    private int role;
+    private int role = 2;
 
     public Employee() {
 

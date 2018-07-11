@@ -40,7 +40,7 @@
                     <tr>
                         <td>账户名：</td>
                         <td>
-                            <input type="text" id="accountname" name="accountname" maxlength="20"/>
+                            <input type="text" id="accountname" name="username" maxlength="20"/>
                         </td>
                     </tr>
                     <tr>

@@ -8,7 +8,9 @@
           SELECT *
           FROM employee
           WHERE
-            username= #{username} AND password=#{password}
+            username= #{username}
+            AND password=#{password}
+            And status = 1
     </select>
 
     <select id="getEmpByMeetingId" resultType="Employee">
@@ -40,11 +42,13 @@
         SELECT * from employee WHERE username=#{username}
     </select>
 
-    <select id="getUnApproveaccount" resultType="Employee">
+
+
+     <select id="getUnApproveaccount" resultType="Employee">
         SELECT *
         FROM employee
         WHERE
-          status=1 AND role =2
+          status =0 AND role =2
     </select>
 
     <update id="updateEmpStatusById">

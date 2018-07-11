@@ -40,7 +40,12 @@ public class EmployeeService {
     }
 
     public   int reg(Employee e){
-        
+
+        String username = e.getUsername();
+        String password = e.getPassword();
+        String md5Password = Md5Utils.getMd5(username,password);
+
+        e.setPassword(md5Password);
         return employeeDao.reg(e);
     }
 

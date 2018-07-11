@@ -59,15 +59,6 @@
             this.departmentname = departmentname;
             this.employees = employees;
         }
-        var data = new Array(
-            new department(1, "技术部", new Array(
-                new employee(1001, "a00"), new employee(1002, "a01"), new employee(1003, "a02"), new employee(1004, "a03"))),
-            new department(2, "销售部", new Array(
-                new employee(2001, "b00"), new employee(2002, "b01"), new employee(2003, "b02"), new employee(2004, "b03"))),
-            new department(3, "市场部", new Array(
-                new employee(3001, "c00"), new employee(3002, "c01"), new employee(3003, "c02"), new employee(3004, "c03"))),
-            new department(4, "行政部", new Array(
-                new employee(4001, "d00"), new employee(4002, "d01"), new employee(4003, "d02"), new employee(4004, "d03"))));
 
         var selDepartments;
         var selEmployees;

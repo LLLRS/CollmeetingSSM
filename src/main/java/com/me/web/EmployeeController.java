@@ -223,8 +223,11 @@ public class EmployeeController {
 
         int reg = es.reg(employee);
         if (reg == 1) {
-            //注册成功，跳转到登录页面
-            return "login";
+            //注册成功，再次跳转到注册页面
+
+            List<Department> list = departmentService.getAllDepartment();
+            model.addAttribute("list", list);
+            return "register";
         } else if (reg == -1) {
             //用户名重复，注册失败
             model.addAttribute("error", "用户名重复，注册失败");
